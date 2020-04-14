@@ -1,0 +1,54 @@
+Git
+---
+Git is distributed repository where every local machine contains the copy of the projects and SVN or CVS or central repository where projects relies only in central server
+
+Features
+---------
+Fetching data from local repository is faster than fecthing from repository.
+Its an open source
+
+
+Commands
+--------
+git init - to initialize a repoisitory
+
+$ git init
+Initialized empty Git repository in D:/STS-Workspace/.git/
+
+
+git remote add orgin - to add a repository to pull or push files from.
+
+Manisurya@LAPTOP-SKURJK48 MINGW64 /d/STS-Workspace (master)
+$ git remote add orgin https://github.com/manikandant093/msgit.git
+
+
+
+git pull orgin master - to pull the master branch (files pulled will be in compressed format, once u included in workspaceor staging area it will be unpacked, after we pushed that it will be changed back to compressed format)
+
+git pull orgin master
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.20 KiB | 3.00 KiB/s, done.
+From https://github.com/manikandant093/msgit
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> orgin/master
+ 
+ 
+git status - to know the status of the index or untracked files. 
+ 
+git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .metadata/
+        HelloWorld/
+        PeopleManagementApp-2/
+        PeopleManagementApp/
+        SimpleMavenForGit/
+        TicketBookingManagent/
+        TicketBookingManagent2WithMySQL/
+
+nothing added to commit but untracked files present (use "git add" to track)
+ 
