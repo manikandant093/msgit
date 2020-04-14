@@ -126,6 +126,24 @@ $ git commit -m "Committed the SimpleMavenProj by Manikandan"
  create mode 100644 SimpleMavenForGit/target/classes/META-INF/maven/com.simplemaven.git/SimpleMavenForGit/pom.properties
  create mode 100644 SimpleMavenForGit/target/classes/META-INF/maven/com.simplemaven.git/SimpleMavenForGit/pom.xml
  create mode 100644 SimpleMavenForGit/target/classes/com/myproj/MyClass.class
+ 
+ $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SimpleMavenForGit/Notes
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .metadata/
+        HelloWorld/
+        PeopleManagementApp-2/
+        PeopleManagementApp/
+        TicketBookingManagent/
+        TicketBookingManagent2WithMySQL/
+
+no changes added to commit (use "git add" and/or "git commit -a")
 
 
 *************************************************************************************************************************
