@@ -177,4 +177,6 @@ Date:   Tue Apr 14 20:03:02 2020 +0530
     Committed the SimpleMavenProj by Manikandan
     
 *****************************************************************************************************************************  
+
+git merge branchname - to merge a branch into another branch 
  
