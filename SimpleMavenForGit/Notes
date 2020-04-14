@@ -111,4 +111,22 @@ $ git config user.name "Manikandan T"
 
 git commit -m   - m -> reason message while committing
 
+$ git commit -m "Committed the SimpleMavenProj by Manikandan"
+[master 67df4ac] Committed the SimpleMavenProj by Manikandan
+ 12 files changed, 181 insertions(+)
+ create mode 100644 SimpleMavenForGit/.classpath
+ create mode 100644 SimpleMavenForGit/.project
+ create mode 100644 SimpleMavenForGit/.settings/org.eclipse.jdt.apt.core.prefs
+ create mode 100644 SimpleMavenForGit/.settings/org.eclipse.jdt.core.prefs
+ create mode 100644 SimpleMavenForGit/.settings/org.eclipse.m2e.core.prefs
+ create mode 100644 SimpleMavenForGit/Notes
+ create mode 100644 SimpleMavenForGit/pom.xml
+ create mode 100644 SimpleMavenForGit/src/main/java/com/myproj/MyClass.java
+ create mode 100644 SimpleMavenForGit/target/classes/META-INF/MANIFEST.MF
+ create mode 100644 SimpleMavenForGit/target/classes/META-INF/maven/com.simplemaven.git/SimpleMavenForGit/pom.properties
+ create mode 100644 SimpleMavenForGit/target/classes/META-INF/maven/com.simplemaven.git/SimpleMavenForGit/pom.xml
+ create mode 100644 SimpleMavenForGit/target/classes/com/myproj/MyClass.class
+
+
+*************************************************************************************************************************
  
