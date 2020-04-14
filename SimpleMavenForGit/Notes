@@ -10,18 +10,21 @@ Its an open source
 
 Commands
 --------
+
+*************************************************************************************************************************
 git init - to initialize a repoisitory
 
 $ git init
 Initialized empty Git repository in D:/STS-Workspace/.git/
 
+*************************************************************************************************************************
 
 git remote add orgin - to add a repository to pull or push files from.
 
 Manisurya@LAPTOP-SKURJK48 MINGW64 /d/STS-Workspace (master)
 $ git remote add orgin https://github.com/manikandant093/msgit.git
 
-
+*************************************************************************************************************************
 
 git pull orgin master - to pull the master branch (files pulled will be in compressed format, once u included in workspaceor staging area it will be unpacked, after we pushed that it will be changed back to compressed format)
 
@@ -35,8 +38,9 @@ From https://github.com/manikandant093/msgit
  * branch            master     -> FETCH_HEAD
  * [new branch]      master     -> orgin/master
  
+ *************************************************************************************************************************
  
-git status - to know the status of the index or untracked files. 
+git status - to know the status of the tracked or untracked files. 
  
 git status
 On branch master
@@ -51,4 +55,60 @@ Untracked files:
         TicketBookingManagent2WithMySQL/
 
 nothing added to commit but untracked files present (use "git add" to track)
+
+*************************************************************************************************************************
+
+
+git add SimpleMavenForGit
+
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   SimpleMavenForGit/.classpath
+        new file:   SimpleMavenForGit/.project
+        new file:   SimpleMavenForGit/.settings/org.eclipse.jdt.apt.core.prefs
+        new file:   SimpleMavenForGit/.settings/org.eclipse.jdt.core.prefs
+        new file:   SimpleMavenForGit/.settings/org.eclipse.m2e.core.prefs
+        new file:   SimpleMavenForGit/Notes
+        new file:   SimpleMavenForGit/pom.xml
+        new file:   SimpleMavenForGit/src/main/java/com/myproj/MyClass.java
+        new file:   SimpleMavenForGit/target/classes/META-INF/MANIFEST.MF
+        new file:   SimpleMavenForGit/target/classes/META-INF/maven/com.simplemaven.git/SimpleMavenForGit/pom.properties
+        new file:   SimpleMavenForGit/target/classes/META-INF/maven/com.simplemaven.git/SimpleMavenForGit/pom.xml
+        new file:   SimpleMavenForGit/target/classes/com/myproj/MyClass.class
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .metadata/
+        HelloWorld/
+        PeopleManagementApp-2/
+        PeopleManagementApp/
+        TicketBookingManagent/
+        TicketBookingManagent2WithMySQL/
+        
+*************************************************************************************************************************
+The first thing you should do after installing Git on your system is to configure your git username and email address. Git associate your identity with every commit you make.
+
+Git allows you to set a global and per-project username and email address. You can set or change your git identity using the git config command. Changes only affect future commits. The name and email associated with the commits you made prior to the change are not affected.
+
+The global git username and password are associated with commits on all repositories on your system that don’t have repository-specific values.
+
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
+
+Need to configure the username and mail id
+-------------------------------------------
+
+Manisurya@LAPTOP-SKURJK48 MINGW64 /d/STS-Workspace (master)
+$ git config user.email "manikandant093@gmail.com"
+
+Manisurya@LAPTOP-SKURJK48 MINGW64 /d/STS-Workspace (master)
+$ git config user.name "Manikandan T"
+
+*************************************************************************************************************************
+
+git commit -m   - m -> reason message while committing
+
  
