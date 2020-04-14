@@ -58,8 +58,8 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 *************************************************************************************************************************
 
-
-git add SimpleMavenForGit
+git add SimpleMavenForGit   - adding this project to the staged area for commit.
+git add -A   - adding all the files and folders in the repository to the staging area.
 
 
 $ git status
