@@ -149,4 +149,32 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 
 *************************************************************************************************************************
+git log - to see the all commit operations done by the user
+
+git log
+commit 21b24e9f672930f20f15f696a6c134f39b1ee128 (HEAD -> master)
+Author: Manikandan T <manikandant093@gmail.com>
+Date:   Tue Apr 14 20:09:53 2020 +0530
+
+    Committed the SimpleMavenProj by Manikandan
+
+commit c8ea6207ffd849c4c518185e061c66335445893b
+Author: Manikandan T <manikandant093@gmail.com>
+Date:   Tue Apr 14 20:08:22 2020 +0530
+
+    Committed the SimpleMavenProj by Manikandan
+
+commit daf7791bb90c0501f19a7d8f1aff2231c3aed31e
+Author: Manikandan T <manikandant093@gmail.com>
+Date:   Tue Apr 14 20:04:02 2020 +0530
+
+    Committed the SimpleMavenProj by Manikandan
+
+commit 07211e3792212820ef150e2f0e66cc215a1dae38
+Author: Manikandan T <manikandant093@gmail.com>
+Date:   Tue Apr 14 20:03:02 2020 +0530
+
+    Committed the SimpleMavenProj by Manikandan
+    
+****************************************************************************************************************************    
  
