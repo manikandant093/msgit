@@ -181,7 +181,23 @@ Date:   Tue Apr 14 20:03:02 2020 +0530
 git merge branchname - to merge a branch into another branch 
  
  
- *****************************************************************************************************************************
+*****************************************************************************************************************************
  
  $ ssh-keygen - to generate a key to authenticate with github
+ 
+ 
+ *****************************************************************************************************************************
+ 
+ git push orgin master - pushing the committed files to master branch
+ 
+ $ git push orgin master
+Enumerating objects: 65, done.
+Counting objects: 100% (65/65), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (54/54), done.
+Writing objects: 100% (64/64), 8.22 KiB | 561.00 KiB/s, done.
+Total 64 (delta 18), reused 0 (delta 0)
+remote: Resolving deltas: 100% (18/18), done.
+To https://github.com/manikandant093/msgit.git
+   029e14c..9c52fba  master -> master
  
