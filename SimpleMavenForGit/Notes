@@ -178,7 +178,16 @@ Date:   Tue Apr 14 20:03:02 2020 +0530
     
 *****************************************************************************************************************************  
 
-git merge branchname - to merge a branch into another branch 
+git merge branchname - to merge the new branch into the master branch from master branch 
+
+once merged fill the commit msg in commands by
+
+press i
+enter the masg
+pres escape
+and type :wq and enter
+
+After merged it with the local master branch and push it to the remote master branch 
  
  
 *****************************************************************************************************************************
