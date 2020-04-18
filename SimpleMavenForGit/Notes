@@ -178,3 +178,51 @@ Date:   Tue Apr 14 20:03:02 2020 +0530
     
 ****************************************************************************************************************************    
  
+ git branch -a - to viuew all the local and remote branches
+ 
+ $ git branch -a
+  firstbrach
+* master
+  remotes/orgin/master
+ 
+ 
+ $ git branch -r  - shows only remote branche
+  orgin/master
+ 
+ 
+ $ git branch  - lists the local branches only
+  firstbrach
+* master
+ 
+ 
+ $ git show-branch    - to see the list of branches and commits as follows
+! [firstbrach] Committed the SimpleMavenProj by Manikandan
+ * [master] Committed the SimpleMavenProj by Manikandan
+--
+ * [master] Committed the SimpleMavenProj by Manikandan
+ * [master^] Committed the SimpleMavenProj by Manikandan
+ * [master~2] Committed the SimpleMavenProj by Manikandan
+ * [master~3] Committed the SimpleMavenProj by Manikandan
++* [firstbrach] Committed the SimpleMavenProj by Manikandan
+
+
+Manisurya@LAPTOP-SKURJK48 MINGW64 /d/STS-Workspace (firstbrach)
+$ git branch myBranch   -creates new branch called myBranch by cloning the firstbrach
+
+
+$ git checkout myBranch  - used to switch between branches
+Switched to branch 'myBranch'
+M       SimpleMavenForGit/Notes
+M       SimpleMavenForGit/target/classes/META-INF/maven/com.simplemaven.git/SimpleMavenForGit/pom.properties
+
+
+Manisurya@LAPTOP-SKURJK48 MINGW64 /d/STS-Workspace (myBranch)
+$ git branch -a
+  firstbrach
+  master
+* myBranch
+  remotes/orgin/master
+  remotes/orgin/myBranch
+
+
+**************************************************************************************************************************************
