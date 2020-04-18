@@ -93,7 +93,7 @@ The first thing you should do after installing Git on your system is to configur
 
 Git allows you to set a global and per-project username and email address. You can set or change your git identity using the git config command. Changes only affect future commits. The name and email associated with the commits you made prior to the change are not affected.
 
-The global git username and password are associated with commits on all repositories on your system that don’t have repository-specific values.
+The global git username and password are associated with commits on all repositories on your system that donâ€™t have repository-specific values.
 
 git config --global user.name "Your Name"
 git config --global user.email "youremail@yourdomain.com"
@@ -249,3 +249,5 @@ $ git branch -a
 
 
 **************************************************************************************************************************************
+********Edited in GitHub Site for pulling example ********
+
