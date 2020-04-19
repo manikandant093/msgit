@@ -264,9 +264,11 @@ $ git branch -d firstbrach       --- to delete the mentioned branch
 
 Deleted branch firstbrach (was 9609deb).
 
-
-
 **************************************************************************************************************************************
+
+git fetch  -used to fetch the contents of the repository but does not do the commit.
+
+git pull  - (git fetch + git merge)  used to fetch the contents of the repo and commit/merge the change in working directory
 
 ********Edited in GitHub Site for pulling example ********
 
