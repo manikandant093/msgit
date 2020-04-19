@@ -265,6 +265,8 @@ $ git branch -d firstbrach       --- to delete the mentioned branch
 Deleted branch firstbrach (was 9609deb).
 
 **************************************************************************************************************************************
+fetch and pull difference
+
 
 git fetch orgin master  -used to fetch the contents of the master repository but does not do the commit/merge the changes in the WT.
              once fetched, the corresponding remote branch will be tracked and then have to give git merge orgin/master to update
@@ -272,5 +274,38 @@ git fetch orgin master  -used to fetch the contents of the master repository but
 
 git pull  - (git fetch + git merge)  used to fetch the contents of the repo and commit/merge the change in working directory
 
+**************************************************************************************************************************************
+
+
+git checkout - used to discard changes in the index files before committing.
+
+git checkout <hash> - to get the changes from the last commit but not committing like revert
+
+git reset - used to reset the contents of a file (soft, hard , mixed)
+
+
+git revert - used to revert the specified commit  (git revert 7sd6s7 filename) (reverting to the previous commit of the mentioned hash and push it to
+                                                                                 merge it to the WT)
+                                                                                
+**************************************************************************************************************************************
+HEAD - a pointer which always points the latest commit
+
+WT - working directory which we are working.
+
+index - files staged for committing
+
+merge vs rebase
+---------------
+
+git rebase master (from myBranch) - adds the base of the myBranch to the head of the master.
+
+example : master ----> m1 -- m2 -- m3
+          myBranch ----> m2 --f1 -- f2
+      
+      git rebase master (from myBranch)  - m1 -- m2 -- m3 --f1 -- f2
+      git reabse myBranch (from master)   - m3 -- m2 -- f1 -- f2
+
+                                                                                 
+                                                                                 
 ********Edited in GitHub Site for pulling example ********
 
