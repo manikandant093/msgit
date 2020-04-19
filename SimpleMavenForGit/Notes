@@ -266,7 +266,9 @@ Deleted branch firstbrach (was 9609deb).
 
 **************************************************************************************************************************************
 
-git fetch  -used to fetch the contents of the repository but does not do the commit.
+git fetch orgin master  -used to fetch the contents of the master repository but does not do the commit/merge the changes in the WT.
+             once fetched, the corresponding remote branch will be tracked and then have to give git merge orgin/master to update
+             the local  working directory
 
 git pull  - (git fetch + git merge)  used to fetch the contents of the repo and commit/merge the change in working directory
 
