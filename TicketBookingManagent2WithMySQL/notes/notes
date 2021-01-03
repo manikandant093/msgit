@@ -1,0 +1,167 @@
+Spring data jpa provides various features for CRUD operations.
+
+It provides interfaces for default crud operations which are used to avoid boiler plate code regarding data access
+in data access layer.
+
+JPA is a specification for ORM and its a J2EE standard and java provides default implementations since its a standard
+By deafault hibernate will be chosed in spring boot
+
+Hibernate is an ORM tool that implements the JPA specification.
+
+
+@DynamicUpdate - used to update only the required property while updating an object using save method.bcoz by default every property
+                 will be in the query after "set".so to avoid this we use this
+                 
+                 
+custom queries cam be created in 3 ways : 
+1. Using method name (jpa will provide the query)
+2. using @NamedQuery(name="", query="?")  or @NativeNamedQuery 
+3. using @Query(":lastname") (eg) (uses @param("lastname")) its having high priority then NamedQuery
+   here we can also use native query (NativeQuery=true)
+   
+   
+   
+   IMPT : We can  pass the parameters ti the query in 2 ways 
+   1. using ? symbol (automatically detected by the given index)
+   2. named parameter   :nameoftheparameter  and can detect by @Param("nameoftheparameter") String nameoftheparameter;
+   
+   SQL can be in 2 ways in queries
+   1. JPQL (JPA specific query language)
+   2.Native queries from sql or any other db
+   
+   
+   @Modifying  - will be used to annotate if there are any update or insert queries instead of just selecting query
+   @Transactional -  Should be used over a method whenever we are performing the insert or update queries
+   
+   
+   
+   Devtools  - automatically resatrt the server if the source code is changed.
+   Actuator - Provide a list of endpoints that gives more detail about the server and services that a service offers
+             e.g : /health - tells whether server is up or not.
+                   /env  - tells about the environement.
+                   
+                   more end points are sensitive so will give need authentication message while accessing it. so avoid that we can use the
+                   property called management.security.enabled =false
+                   
+                   management.port =9990  -->we can make the actuator run on diff port using this
+                   
+                   we can customize every endpoint using the below
+                   endpoints.{endpointname}.{featurename} = newValue
+                   e.g endpoints.env.id = myEnv
+                   
+                   ---------------------------------------------------------------------------------------------------------------------------
+                   
+                   
+                   spring-boot-starter-security - provides support for authentication and authorization. especially it protects the actuators's 
+                                                  sensitive end points.using this we can protect the paricular apis in a service too
+                                 by default, auto password will be generated in console.otherwise we can mention it property like 
+                                 
+                                 spring.user.name=admin
+                                 spring.user.password=password
+                                 
+                                 we can pass this as header in post man using base auth tag
+                                 
+                  In memory authentication can also be done by spring data security.
+                  
+                  to do that follow the steps.
+                  
+                  1. add the spring-boot-starter-security dependency
+                  2.create or configure the security class which extends WebSecurityConfigurerAdapter
+                  3.in that class mention what are the apis can be accessed by whom and what are the roles are available
+                  4.and create the users with name and password and assign what kind of roles they have
+                  5.run the server. 
+---------------------------------------------------------------------------------------------------------------------------
+                               
+                                                  
+ spring-boot log - no need to specify this in pom for logging. because spring boot has this by default
+ 
+ 
+ spring-boot-starter-web --> adds the default tomcat server.
+ 
+ steps to use other embedded servers than default tomcat server
+ 
+ 1. exclude the tomcat server from spring-boot-starter-web in pom using exclusion tag
+ 2. specify the jetty or any other server as dependency in pom 
+ 
+ 
+ 
+ 
+ To remove whitlabel error : 
+ ---------------------------
+ implement the interface called ErrorController
+ add the controller for error using the /error path
+ and set a default message
+ 
+ 
+ 
+ Spring boot profiles
+ -------------------
+ Spring boot enables us to create profile contains environment related information or to customize the properties like port number,
+ or which database to be used at particular environment and etc.,
+ 
+ To do that we need to create environment specific properties :
+ e.g application-dev.properties
+     application-prod.properties
+     and application.properties is the default file in which we have to mention what profile should be picked at an environment using the 
+     property called spring.profiles.active=dev or spring.profiles.active=prod
+ 
+ It can also be done in java classes by @profile("profile name") annotation
+ and can call that partcular java class object
+ 
+ 
+ 
+ Spring boot xml configuration
+ ------------------------------
+ Declare all the beans in an xml file an put it in the resource folder.
+ Include that xml file in the Springboot application file or controller file using 
+ @ImportResource(value = "classpath:filename.xml")
+ 
+ 
+ CommandLineRunner and ApplicationRunner
+ ---------------------------------------
+ Both are used to capture the commandline arguments and to do some task after main method called.
+ One difference is commandline runner accepts the arguments as string var arg but other one does that as ApplicationArguments
+ 
+ 
+ Ways to change port number of server:
+ -------------------------------------
+ 1.server.port=portnumber in property file
+ 2.Environment tab in eclipse mention it as SERVER_PORT and value
+ 3.java -jar app.jar --server.port=8787 or java -jar -Dserver.port=8787 app.jar 
+ 4.By java file  
+   SpringApplication springApplication =  new SpringApplication(TicketBookingManagentApplication.class);
+   Map<String,Object> confMap = new HashMap();
+   confMap.put("SERVER_PORT",8585);
+   springApplication.setDefaultProperties(confMap);
+   springApplication.run(args);
+   
+ 5.EmbeddedServletContainerCustomizer interface
+    by implementing this method we can set it as container.setPort(7171)
+    
+    If you mention server.port=0 , then it will automatically assign any available port.
+    
+    
+Changing the Context path of the service 
+----------------------------------------
+Same as the ways mentioned for port number .  prpt name : server.context-path=/myApp
+
+SSL in spring boot
+-------------------
+generate a certificate file and put it in the resurce folder
+mention the server.ssl.* properties in the property file
+and run the application using https
+keytool - available in java bin folder to generate sample certificate for testing purpose
+
+Its possible to create multiple sslconnectors(https and http) in spring boot
+
+
+AOP
+---
+@EnableAspectJAutoProxy(proxyTargetClass=true) - used to enable the aop in boot. similar to Spring's {@code <aop:aspectj-autoproxy>} XML element.
+spring-boot-starter-aop - dependency for aop in spring boot
+@After
+@AfterReturn
+@AfterThrowing
+@Around
+   
+ 

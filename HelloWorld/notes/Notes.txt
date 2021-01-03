@@ -1,0 +1,34 @@
+Spring boot app can be created by 3 ways
+
+1.Eclipse maven proj
+2.STS
+3.SPRING INITIALIZER (website)
+
+can be run on 2 ways :
+
+1. thorough IDE
+2.SPRING CLI (command line interface)
+
+Running on CLI
+--------------
+1.Unzip the downloaded
+2.set a path for SPRING CLI up to bin folder
+3.create a groovy file and copy the controller code to grovvy file..(we can remove all the import in groovy file)
+4.run file using command
+  spring run filename.groovy
+
+
+What is groovy used for?
+It can be used as both a programming language and a scripting language for the Java Platform, 
+is compiled to Java virtual machine (JVM) bytecode, and interoperates seamlessly with other Java code 
+and libraries. Groovy uses a curly-bracket syntax similar to Java's.
+
+
+cons of spring boot
+------------
+1.migration effort -migrating from old spring to new spring boot proj is not straight forward.it mostly for
+  new development projects
+
+2.Deployment to other servers is bit difficult with downgrading some version and removing jars
+
+3.spring mostly focuses on micro services and cloud native.not other areas
